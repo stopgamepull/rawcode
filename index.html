@@ -1,0 +1,609 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Trust Model </title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="header-info">
+                <span class="title">Code Trust Model </span>
+                <span class="status">CPU: x86_64 | MEMORY: 16 KB</span>
+            </div>
+            <div class="window-controls">
+                <button class="control minimize" title="Minimize">_</button>
+                <button class="control maximize" title="Maximize">☐</button>
+                <button class="control close" title="Close">X</button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main">
+            <!-- Home Section -->
+            <section id="home" class="section">
+                <h1>Welcome to our journey with Code Trust Model </h1>
+                <p>A tribute to low-level programming mastery. Explore how we deployed a token entirely in raw assembly language.</p>
+            </section>
+
+            <!-- Documentation Section -->
+            <section id="resources" class="section">
+                <h2>Resources</h2>
+                <p>Find the complete assembly script and detailed instructions on our <a href="https://github.com/Hxrith1/asmblr" target="_blank">GitHub repository</a>.</p>
+            </section>
+
+<!-- Future Tools Section -->
+<section id="teaser" class="section">
+    <h2>Future Tools</h2>
+    <p>We are building a deployer tool that will allow you to create your own tokens in raw assembly language. Sign up to the whitelist to be part of the action!</p>
+    <p>Stay tuned!</p>
+    <button class="retro-button deploy-button" title="Deploy Token" onclick="showDeployerWindow()">Deploy Token</button>
+</section>
+
+<!-- Inline CSS for Retro Button -->
+<style>
+    .retro-button {
+        background: gray;
+        color: black;
+        font-family: 'Courier New', Courier, monospace;
+        padding: 5px 15px;
+        border: 1px solid black;
+        box-shadow: inset -1px -1px 0 white, inset 1px 1px 2px black;
+        cursor: pointer;
+    }
+
+    .retro-button:hover {
+        background: white;
+        color: black;
+    }
+
+    .deploy-button {
+        margin-top: 10px; 
+</style>
+
+<!-- Inline JavaScript -->
+<script>
+    function showDeployerWindow() {
+        const modal = document.getElementById('deployerWindow');
+        modal.classList.remove('hidden');
+        modal.style.display = 'block';
+    }
+
+    function closeDeployerWindow() {
+        const modal = document.getElementById('deployerWindow');
+        modal.classList.add('hidden');
+        modal.style.display = 'none';
+    }
+</script>
+
+
+<!-- Modal Window -->
+<div id="deployerWindow" class="modal-window hidden">
+    <div class="modal-header">
+        <span class="modal-title">Whitelist</span>
+        <button class="close-button" onclick="closeDeployerWindow()">X</button>
+    </div>
+    <div class="modal-content">
+        <form id="whitelistForm">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required="">
+            
+            <label for="wallet">Solana Wallet Address:</label>
+            <input type="text" id="wallet" name="wallet" placeholder="Enter your wallet address" required="">
+            
+            <button type="submit" class="submit-button retro-button">Submit</button>
+        </form>
+    </div>
+</div>
+
+<!-- Inline CSS -->
+<style>
+    /* Modal Window Styles */
+    .modal-window {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        background: white;
+        border: 2px solid #888;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+        font-family: 'Courier New', Courier, monospace;
+        z-index: 1000;
+    }
+
+    .modal-window.hidden {
+        display: none;
+    }
+
+    .modal-header {
+        background: #0000ff;
+        color: white;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .modal-title {
+        font-size: 16px;
+    }
+
+    /* Retro Close Button */
+    .close-button {
+        background: gray;
+        border: 1px solid black;
+        color: black;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 14px;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        padding: 0;
+        line-height: 18px;
+        cursor: pointer;
+        box-shadow: inset -1px -1px 0 white, inset 1px 1px 2px black;
+    }
+
+    .close-button:hover {
+        background: white;
+        color: black;
+    }
+
+    .modal-content {
+        padding: 20px;
+    }
+
+    .modal-content label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+
+    .modal-content input {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 15px;
+        border: 1px solid #888;
+        border-radius: 3px;
+        font-size: 14px;
+    }
+
+    /* Retro Submit Button */
+    .retro-button {
+        background: #888;
+        color: black;
+        font-family: 'Courier New', Courier, monospace;
+        padding: 5px 15px;
+        border: 1px solid black;
+        box-shadow: inset -1px -1px 0 white, inset 1px 1px 2px black;
+        cursor: pointer;
+    }
+
+    .retro-button:hover {
+        background: white;
+        color: black;
+    }
+</style>
+
+<script>
+    function showDeployerWindow() {
+        const modal = document.getElementById('deployerWindow');
+        modal.classList.remove('hidden');
+        modal.style.display = 'block';
+    }
+
+    function closeDeployerWindow() {
+        const modal = document.getElementById('deployerWindow');
+        modal.classList.add('hidden');
+        modal.style.display = 'none';
+    }
+
+    document.getElementById('whitelistForm').addEventListener('submit', async function (e) {
+        e.preventDefault(); 
+
+        const email = document.getElementById('email').value;
+        const wallet = document.getElementById('wallet').value;
+
+        if (wallet.length !== 44) {
+            alert('Invalid Solana wallet address. Please enter a 44-character address.');
+            return; 
+        }
+
+        try {
+            const response = await fetch('https://asmblr-backend-f3359245755d.herokuapp.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, wallet }),
+            });
+
+            if (response.ok) {
+                alert('You’ve been added to the waitlist!');
+                closeDeployerWindow();
+            } else {
+                alert('Error adding to waitlist. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An unexpected error occurred. Please try again.');
+        }
+    });
+</script>
+
+<section id="documentation" class="section">
+                <h2>Documentation</h2>
+                <p>Here’s how we generated a Solana wallet using a low-level assembly-inspired approach:</p>
+
+                <!-- Step 1: Tools and Libraries -->
+                <h3>Step 1: Tools and Libraries</h3>
+                <p>We used the following tools and libraries:</p>
+                <ul>
+                    <li><strong>Libsodium:</strong> A cryptography library for key pair generation. (<a href="https://download.libsodium.org/libsodium/releases/" target="_blank">Download here</a>)</li>
+                    <li><strong>MinGW-w64:</strong> GCC compiler for Windows. (<a href="https://www.mingw-w64.org/downloads/" target="_blank">Download here</a>)</li>
+                    <li><strong>7-Zip:</strong> For extracting compressed files. (<a href="https://www.7-zip.org/" target="_blank">Download here</a>)</li>
+                </ul>
+
+                <!-- Step 2: Extracting and Setting Up -->
+                <h3>Step 2: Extracting and Setting Up</h3>
+                <p>We extracted the downloaded files into our <Code Trust Model >Documents</Code Trust Model > folder and ensured the paths were set correctly in our environment variables.</p>
+                <img src="images/path-to-extraction-screenshot.png" alt="Extracting Files Screenshot" class="screenshot">
+
+                <!-- Step 3: Writing the Code Trust Model  -->
+                <h3>Step 3: Writing the Code Trust Model </h3>
+                <p>Below is the C Code Trust Model  we used to generate the wallet:</p>
+                <div class="Code Trust Model -block">
+                    <pre class="Code Trust Model -snippet">#include <sodium.h>
+#include <stdio.h>
+
+int main() {
+    if (sodium_init() == -1) {
+        return 1;
+    }
+
+    unsigned char seed[crypto_sign_SEEDBYTES];
+    randombytes_buf(seed, sizeof(seed));
+
+    unsigned char pk[crypto_sign_PUBLICKEYBYTES];
+    unsigned char sk[crypto_sign_SECRETKEYBYTES];
+
+    crypto_sign_seed_keypair(pk, sk, seed);
+
+    printf("Public Key: ");
+    for (int i = 0; i < crypto_sign_PUBLICKEYBYTES; i++) {
+        printf("%02x", pk[i]);
+    }
+    printf("\nPrivate Key: ");
+    for (int i = 0; i < crypto_sign_SECRETKEYBYTES; i++) {
+        printf("%02x", sk[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+                    </stdio.h></sodium.h></pre>
+                </div>
+
+                <!-- Step 4: Compiling the Code Trust Model  -->
+                <h3>Step 4: Compiling the Code Trust Model </h3>
+                <p>Use the following command to compile the program:</p>
+                <Code Trust Model >
+gcc -o generate_wallet generate_wallet.c -IC:\Users\User\Documents\libsodium\libsodium-win64\include -LC:\Users\User\Documents\libsodium\libsodium-win64\lib -lsodium
+                </Code Trust Model >
+                <img src="images/path-to-compilation-screenshot.png" alt="Compiling Code Trust Model  Screenshot" class="screenshot">
+
+                <!-- Step 5: Running the Program -->
+                <h3>Step 5: Running the Program</h3>
+                <p>We ran the program to generate our public and private keys:</p>
+                <img src="images/path-to-output-screenshot.png" alt="Output Screenshot" class="screenshot">
+
+                <!-- Generating and Uploading Token Metadata -->
+                <h3>Generating and Uploading Token Metadata</h3>
+                <p>We wrote an assembly program to upload token metadata to a server and display the token metadata on the console. This program makes use of system calls to perform network communication and console output directly from the x86_64 architecture.</p>
+
+                <div class="Code Trust Model -block">
+                    <pre class="Code Trust Model -snippet">section .data
+    api_url db "https://pump.fun/api/ipfs", 0
+    metadata_json db "{\"name\":\"MyToken\",\"symbol\":\"MTK\",\"description\":\"My custom token\",\"twitter\":\"https://twitter.com/MyToken\",\"telegram\":\"https://t.me/MyTokenGroup\",\"website\":\"https://mytoken.io\"}", 0
+    image_path db "example.png", 0
+    user_agent db "User-Agent: AssemblyTechClient/1.0", 0
+    success_msg db "Metadata uploaded successfully!", 0xA, 0
+    url_prefix db "Extracted URL: ", 0
+    response_buffer times 1024 db 0
+
+section .bss
+    bytes_written resb 8
+    file_descriptor resb 4
+
+section .text
+extern printf
+extern curl_easy_init
+extern curl_easy_setopt
+extern curl_easy_perform
+extern curl_easy_cleanup
+global _start
+
+_start:
+    ; Initialize CURL
+    call curl_easy_init
+    mov r12, rax  ; Save CURL handle
+
+    ; Set CURL options
+    mov rcx, r12
+    lea rdx, [rel api_url]
+    mov r8, 0x10002  ; CURLOPT_URL
+    call curl_easy_setopt
+
+    lea rdx, [rel metadata_json]
+    mov r8, 0x10022  ; CURLOPT_POSTFIELDS
+    call curl_easy_setopt
+
+    ; Perform CURL request
+    mov rcx, r12
+    call curl_easy_perform
+
+    ; Print success message
+    lea rdi, [rel success_msg]
+    xor rax, rax
+    call printf
+
+    ; Extract URL from response buffer
+    lea rdi, [rel url_prefix]
+    xor rax, rax
+    call printf
+
+    ; Cleanup and exit
+    mov rcx, r12
+    call curl_easy_cleanup
+
+    ; Exit program
+    mov rax, 60   ; Exit system call
+    xor rdi, rdi  ; Exit Code Trust Model  0
+    syscall
+                    </pre>
+                </div>
+
+                <!-- Step 6: Sending Transaction Details -->
+                <h3>Step 6: Sending Transaction Details to PumpPortal.fun</h3>
+                <p>After generating the metadata URI, our next step was to send the transaction details to the PumpPortal.fun API. This step generates an unsigned transaction, which will be signed locally in the next step.</p>
+
+                <div class="Code Trust Model -block">
+                    <pre class="Code Trust Model -snippet">section .data
+    api_url db "https://pumpportal.fun/api/trade-local", 0
+    json_body db "{\"publicKey\":\"<dev_wallet_address>\",\"action\":\"create\",\"tokenMetadata\":{\"name\":\"ExampleToken\",\"symbol\":\"EXMPL\",\"uri\":\"<metadata_uri>\"},\"mint\":\"<mint_address>\",\"denominatedInSol\":\"true\",\"amount\":\"0.100\",\"slippage\":10,\"priorityFee\":\"0.00010\",\"pool\":\"pump\"}", 0
+    user_agent db "User-Agent: AssemblyTechClient/1.0", 0
+    content_type db "Content-Type: application/json", 0
+    response_buffer times 4096 db 0
+    response_end db 0
+
+section .bss
+    curl_handle resq 1
+
+section .text
+extern printf
+extern curl_easy_init
+extern curl_easy_setopt
+extern curl_easy_perform
+extern curl_easy_cleanup
+global _start
+
+_start:
+    ; Initialize CURL
+    call curl_easy_init
+    mov rdi, rax
+    mov [curl_handle], rdi
+
+    ; Set URL
+    mov rdi, [curl_handle]
+    lea rsi, [rel api_url]
+    mov rdx, 0x10002  ; CURLOPT_URL
+    call curl_easy_setopt
+
+    ; Set POST data
+    lea rsi, [rel json_body]
+    mov rdx, 0x10022  ; CURLOPT_POSTFIELDS
+    call curl_easy_setopt
+
+    ; Set headers
+    lea rsi, [rel user_agent]
+    mov rdx, 0x10012  ; CURLOPT_USERAGENT
+    call curl_easy_setopt
+
+    lea rsi, [rel content_type]
+    mov rdx, 0x1003A  ; CURLOPT_HTTPHEADER
+    call curl_easy_setopt
+
+    ; Set response buffer
+    lea rsi, [rel response_buffer]
+    mov rdx, 0x1001D  ; CURLOPT_WRITEDATA
+    call curl_easy_setopt
+
+    ; Perform the request
+    mov rdi, [curl_handle]
+    call curl_easy_perform
+
+    ; Print response
+    lea rdi, [rel response_buffer]
+    xor rax, rax
+    call printf
+
+    ; Cleanup CURL
+    mov rdi, [curl_handle]
+    call curl_easy_cleanup
+
+    ; Exit
+    mov rax, 60  ; Exit syscall
+    xor rdi, rdi
+    syscall
+                    </mint_address></metadata_uri></dev_wallet_address></pre>
+                </div>
+
+                <p>The response from the API contains the unsigned transaction in Base58 format. We saved this response for the signing process in the next step.
+<img src="images/unsigned-txns.png" alt="Unsigned Transactions Screenshot" class="screenshot"></p>
+
+<!-- Step 7: Signing the Transaction Locally -->
+<h3>Step 7: Signing the Transaction Locally</h3>
+<p>While working with assembly scripts to sign transactions, we encountered limitations due to the lack of libraries and efficient tooling for cryptographic operations. To overcome this, we developed a hybrid approach using a C script supported by a Rust script for handling the signing process. Below is the detailed explanation and implementation:</p>
+
+<h4>C Script: signer.c</h4>
+<p>The C script dynamically loads a Rust DLL for signing and forwards the signed transaction to the Helius RPC.</p>
+<div class="Code Trust Model -block">
+<pre class="Code Trust Model -snippet">#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <curl curl.h="">
+#include <windows.h>
+
+#define HELIUS_RPC_URL "https://rpc.helius.xyz/v1/your-api-key"
+#define AUTH_HEADER "Authorization: your-api-key"
+
+void send_transactions() {
+    // ... Include the relevant logic from signer.c here
+}
+
+int main() {
+    send_transactions();
+    return 0;
+}
+</windows.h></curl></string.h></stdlib.h></stdio.h></pre>
+</div>
+
+<h4>Rust Script: lib.rs</h4>
+<p>The Rust script provides the necessary cryptographic functions for signing transactions.</p>
+<div class="Code Trust Model -block">
+<pre class="Code Trust Model -snippet">use solana_sdk::{
+    signature::{Keypair, Signer},
+    transaction::VersionedTransaction,
+    message::VersionedMessage,
+};
+use std::ffi::{CStr, CString};
+use bs58;
+use binCode Trust Model ;
+
+#[no_mangle]
+pub extern "C" fn sign_transaction(
+    tx_data: *const u8,
+    tx_len: usize,
+    mint_private_key_base58: *const i8,
+    creator_private_key_base58: *const i8,
+) -> *mut i8 {
+    // Rust implementation
+}
+</pre>
+</div>
+
+<h4>Compilation Steps</h4>
+<p>Before using the `signer.c` script, you need to compile the Rust project to generate the necessary DLL file:</p>
+<ul>
+    <li>Navigate to the Rust project's root directory and build it into a DLL:
+        <Code Trust Model >
+        cargo build --release --target x86_64-pc-windows-gnu
+        </Code Trust Model >
+    </li>
+    <li>Copy the generated DLL file (<Code Trust Model >solana_sdk_wrapper.dll</Code Trust Model >) from the <Code Trust Model >target/release</Code Trust Model > directory to the same directory as your `signer.c` executable.</li>
+    <li>Compile the `signer.c` script with the following command:
+        <Code Trust Model >
+        gcc -o signer signer.c -L. -lsolana_sdk_wrapper
+        </Code Trust Model >
+    </li>
+</ul>
+
+<p>After signing, the transaction will be ready for submission to the blockchain. The signed transaction in Base58 format will look something like this:</p>
+<Code Trust Model >3B98p3...SignedTransactionEnCode Trust Model d</Code Trust Model >
+<p>Save the signed transaction for the next step: submitting it to the blockchain.</p>
+
+<!-- Step 8: Submitting the Transaction to Jito API -->
+<h3>Step 8: Submitting the Transaction to Jito API</h3>
+<p>The final step was sending our signed transaction to the Jito API for validation and inclusion in a Solana block. This step ensures the transaction is broadcast to the network securely and efficiently.</p>
+
+<h4>Understanding the Process:</h4>
+<ul>
+    <li><strong>Jito API:</strong> A high-performance API designed for submitting Solana transactions with low latency.</li>
+    <li><strong>Transaction Hash:</strong> The response from the Jito API includes a transaction hash, which can be used to track the transaction on Solscan.</li>
+</ul>
+
+<div class="Code Trust Model -block">
+    <pre class="Code Trust Model -snippet">section .data
+    jito_api_url db "https://mainnet.block-engine.jito.wtf/api/v1/bundles", 0
+    signed_txn db "base58_enCode Trust Model d_signed_transaction", 0
+    json_body_template db "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"sendBundle\",\"params\":[[\"", 0
+    json_body_end db "\"]]}", 0
+    complete_json_body times 1024 db 0
+    response_buffer times 4096 db 0
+
+section .bss
+    curl_handle resq 1
+
+section .text
+extern strcat
+extern printf
+extern curl_easy_init
+extern curl_easy_setopt
+extern curl_easy_perform
+extern curl_easy_cleanup
+global _start
+
+_start:
+    ; Build JSON body
+    lea rdi, [rel complete_json_body]
+    lea rsi, [rel json_body_template]
+    call strcat
+    lea rsi, [rel signed_txn]
+    call strcat
+    lea rsi, [rel json_body_end]
+    call strcat
+
+    ; Initialize CURL
+    call curl_easy_init
+    mov rdi, rax
+    mov [curl_handle], rdi
+
+    ; Set URL
+    mov rdi, [curl_handle]
+    lea rsi, [rel jito_api_url]
+    mov rdx, 0x10002  ; CURLOPT_URL
+    call curl_easy_setopt
+
+    ; Set POST data
+    lea rsi, [rel complete_json_body]
+    mov rdx, 0x10022  ; CURLOPT_POSTFIELDS
+    call curl_easy_setopt
+
+    ; Perform the request
+    mov rdi, [curl_handle]
+    call curl_easy_perform
+
+    ; Print response
+    lea rdi, [rel response_buffer]
+    xor rax, rax
+    call printf
+
+    ; Cleanup and exit
+    mov rdi, [curl_handle]
+    call curl_easy_cleanup
+
+    mov rax, 60  ; Exit syscall
+    xor rdi, rdi
+    syscall
+    </pre>
+</div>
+
+<p>After submission, the Jito API returns a transaction hash. Use this hash to track the transaction on <a href="https://solscan.io" target="_blank">Solscan</a>. For example:</p>
+<Code Trust Model >https://solscan.io/tx/<transaction_hash>?cluster=mainnet-beta</transaction_hash></Code Trust Model >
+<p>With this, our transaction lifecycle was complete, and our token was successfully deployed on the Solana blockchain!</p>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2024 Code Trust Model ToCoin. Built from bare metal.</p>
+</footer>
+</div>
+<script src="js/script.js"></script>
+
+
+</div>
+</body></html>
